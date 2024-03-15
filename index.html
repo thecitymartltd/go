@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The city mart LtD</title>
+   <meta name="description" content="প্রকৃতিক উপায়ে উচ্চতা বাড়ান। এক ফাইলেই যথেষ্ট। ">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#FFF8DC;
+        }
+  
+
+  
+        .header {
+    border-bottom: 5px solid red; /* Changed from margin-bottom to border-bottom */
+    height: 70px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+        .header img {     
+         width:100px; 
+         height: 70px;
+          
+        }
+
+        .order-form {
+            width: 80%;
+            background-color: #;
+            margin: 20px auto;
+            padding: 20px;
+            border:px solid black;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-selection {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .product-option {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            border: 2px solid #660099;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-info {
+            margin-right: 20px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .product-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: green;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 0 auto; /* Center horizontally */
+            display: block; /* Make them block elements */
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid;
+        }
+
+        /* Submit button */
+    button[type="submit"] {
+    font-size: 15px;
+    font-weight: bold; /* Add this line to make the text bold */
+    width: 100%; /* Set width to 100px */
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center horizontally */
+    padding: 10px 0; /* Keep top and bottom padding, remove left and right padding */
+    background-color: SteelBlue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+        .alert-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 100px;
+            background-color: red;
+            border-radius: 10px;
+           color: white;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+  
+  
+  
+.styled-div {
+  background-color: mistyrose;
+    width: 300px;
+    height: 260px;
+    padding-bottom: px; 
+    border: 1px solid black;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-div h1,
+.styled-div h2,
+.styled-div p {
+    text-align: center;
+}
+  
+  .styled-div h1 {
+    color: green; /* Change color to green */
+}
+
+.styled-div h2 {
+    padding-top: 2px; /* Reduce top padding */
+    padding-bottom: 2px; /* Reduce bottom padding */
+    padding-right: 10px;
+    font-size: 23px;
+    color: #006666;
+}
+
+  
+  .pricing-header {
+    text-align: center;
+    margin-top: 20px;
+}
+.pricing-header h2 {
+    color: #333;
+    font-size: 35px;
+}
+  
+      #message-us {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0084FF;
+            color: #fff;
+            padding: px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+        }
+
+        #message-us img {
+            width: 50px; /* Adjust the size of the logo */
+            height: 50px;
+            }
+  
+  
+   #contact {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #contact h2 {
+            color: #8cc084;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+        }
+  
+  
+  
+  
+footer {
+            background-color:Teal;
+            color: #fff;
+            text-align: center;
+            display: flex;
+    justify-content: center;
+    align-items: center;
+            padding: 10px;
+            position: flex;
+            height:20px;
+            bottom: 0;
+            width:;
+        }
+  
+  #loadingAnimation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    text-align: center;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loadingText {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+}
+
+  
+  
+    </style>
+
+<style>
+.container {
+   border-radius: 10px;
+  background-color: #AFEEEE;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px auto; /* Center horizontally and add top margin */
+    width: 370px;
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 10px auto; /* Center the image horizontally and vertically */
+    width: 300px;
+    height: 330px;
+    border: px solid ;
+    transition: opacity 0.5s ease;
+}
+
+  .additional-images {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0; /* Adjust spacing around the images */
+    box-sizing: border-box;
+  }
+  .additional-images img {
+    border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    width: 70px; /* Adjust width as needed */
+    height: 75px; /* Adjust height as needed */
+    border: px solid ; /* Add border to the additional images */
+    cursor: pointer;
+    transition: opacity 0.5s ease; /* Add transition effect */
+  }
+
+.container {
+    width: 320px;
+    margin: 20px auto;
+    padding: 20px;
+    border: px solid ;
+    border-radius: 8px;
+  }
+
+.buy-now {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #006666;
+  color: white;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.buy-now:hover {
+  background-color: #006666;
+  transform: scale(1.05);
+}
+
+.buy-now:active {
+  transform: scale(0.95);
+}
+
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-button {
+  height:50px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color:#9966FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  border: 5px solid white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: ;
+}
+
+.custom-button .icon {
+  margin-left: 5px;
+}
+
+.custom-button:after {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  z-index: 0;
+  transform: translate(-50%, -75%) scale(0);
+}
+
+.custom-button:hover:after {
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -75%) scale(2);
+}
+
+
+
+
+
+.payment-method {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.payment-option,
+.shipping-option {
+    text-align: center;
+}
+
+.payment-option i,
+.shipping-option i {
+    font-size: 24px; /* Adjust size as needed */
+}
+
+.payment-option span,
+.shipping-option span {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+
+
+/* FAQ container styling */
+.faq-container {
+    width: 90%;
+    margin: 0 auto; /* Align horizontally center */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* FAQ question styling */
+.faq-question {
+    background-color: ; /* Deep color for question */
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px; /* Set the height of the FAQ question */
+    color: white; /* Text color for question */
+}
+
+/* FAQ answer styling */
+.faq-answer {
+  margin-left:10px;
+  padding-bottom: 5px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Adjusted transition duration */
+    background-color:; /* Light color for answer */
+    padding: px;
+    color: ; /* Text color for answer */
+}
+
+/* Show class for answer */
+.faq-answer.show {
+    max-height: 300px; /* Adjust the max height according to your content */
+    overflow: visible; /* Show the content when the answer is open */
+    opacity: 1; /* Set opacity to 1 for instant text display */
+}
+
+
+.faq-question i {
+    cursor: pointer;
+}
+
+
+.description-box {
+  margin: 0 auto 20px auto; /* Sets top and bottom margin to 0, and left and right margin to auto */
+  width: 80%;
+  height: auto;
+  background-color: PeachPuff; /* Change to your desired background color */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adjust shadow properties as needed */
+  padding: 20px; /* Adjust padding as needed */
+  text-align: center; /* Center-align text */
+}
+
+
+
+.description-box h1 {
+  font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.description-box h2 {
+  font-size: 18px; /* Adjust font size as needed */
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+
+
+  
+  
+  .slider-container {
+    margin-bottom: 10px;
+    height: 830px;
+  position: relative;
+  width: 90%; /* Set maximum width as needed */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  z-index: 2;
+}
+
+.slider-button.prev {
+  left: 0;
+  background-color: aqua;
+}
+
+.slider-button.next {
+  right: 0;
+  background-color: aqua;
+}
+
+  
+
+.slider {
+  margin-bottom: 0; /* Adjust as needed */
+}
+
+.slider-button {
+  margin-top: 5px; /* Adjust as needed */
+}
+
+
+
+</style>
+
+
+
+
+    <!-- Other meta tags and styles -->
+    <meta property="og:image" content="https://github.com/healthymartshop/go/raw/main/20240309_031640.jpg">
+
+</head>
+
+<body>
+
+
+<div class="headline">
+    <h1 style="text-align: center; font-size: 24px; padding: 0 10px;">সম্পুর্ন প্রাকৃতিক উপায়ে উচ্চতা বাড়ান</h1>
+</div>
+
+  
+  <div class="container">
+  <img class="image" src="https://github.com/fbook0/login/raw/main/height5.jpg" alt="First Image" id="mainImage">
+  <div class="additional-images">
+    <img src="https://github.com/fbook0/login/raw/main/height1.jpg" alt="Second Image" class="thumbnail" onclick="changeImage(this)">
+    <img src="https://github.com/fbook0/login/raw/main/height2.jpg" alt="Third Image" class="thumbnail" onclick="changeImage(this)">
+    <img src="https://github.com/fbook0/login/raw/main/height3.jpg" alt="Fourth Image" class="thumbnail" onclick="changeImage(this)">
+    <img src="https://github.com/fbook0/login/raw/main/height4.jpg" alt="Fourth Image" class="thumbnail" onclick="changeImage(this)">
+  </div>
+</div>
+  
+   <h1 style="text-align: center; margin-left:5px; margin-right:5px; font-size: 15px; padding: 0 10px;">HEIGHT Development সাপ্লিমেন্ট পাউডার টি আপনার শরীরে ‘টেস্টোস্টেরনের হরমোনের পরিমাণ বৃদ্ধি করবে, পাশাপাশি হাড়ের টিস্যু পুনরুজ্জীবিত করে দ্রুত হাড়ের বৃদ্ধি করতে সহায়তা করবে। যার ফলে ১টি প্রোডাক্ট ৪০-৪৫ দিন যাবে, আর ৪০-৪৫ দিনে আপনার ২-৪ ইঞ্চি “উচ্চতা” বৃদ্ধি পাবে</h1>
+   
+  
+  <div class="styled-div">
+    <h2 class="small-font">এক মাসের কোর্স ১০০ গ্রাম</h2>
+    <h1 style="text-align: center;">৯৯০ টাকা</h1>
+    <h3 style="text-align: center; color: red; text-decoration: line-through;">রেগুলার প্রাইজ: ১৯৯০ টাকা</h3>
+    <h2 style="text-align: center;">মাত্র ৩০ দিনেই ৩/৪ উচ্চতা বৃদ্ধি পাবে </h2>
+</div>
+  
+  <button class="buy-now">
+    <i class="fas fa-shopping-cart"></i> Buy Now
+</button>
+
+  <dive>
+    
+    <p> </p>
+    
+  </dive>
+  
+  <div class="description-box">
+    <h2>পণ্যের বিবরণ</h2>
+  <h1>Hight Develop supplement</h1>
+   <p>যা মাশরুম,সফেদা,অসগন্ধা, আকরকরা,জিংসিন, বাদাম সহ ৫০ টি প্রাকৃতিক উপাদান দ্বারা তৈরী। আপনার ২-৪ ইঞ্চি উচ্চতা বাড়াবে সম্পূর্ন ন্যাচরাল উপায়ে। এটি সম্পূ্র্ন পার্শ্ব প্রক্রিয়া মুক্ত।</p>
+</div>
+  
+  <h1 style="text-align: center; font-size: 24px; padding: 0 10px;">কাস্টমার রিভিও</h1>
+  
+  <div class="slider-container">
+  <div class="slider">
+    <img src="https://github.com/fbook0/login/raw/main/reve1.jpg" alt="Product Image">
+    <img src="https://github.com/fbook0/login/raw/main/revew2.jpg" alt="Product Image">
+    <img src="https://github.com/fbook0/login/raw/main/revew3.jpg" alt="Product Image">
+    <img src="https://github.com/fbook0/login/raw/main/revew4.jpg" alt="Product Image">
+  </div>
+  <button class="slider-button prev" onclick="prevSlide()">❮</button>
+  <button class="slider-button next" onclick="nextSlide()">❯</button>
+</div>
+
+<script src="script.js"></script>
+ 
+  
+  
+  <h1 style="text-align: center; font-size: 24px; padding: 0 10px;">কিছু প্রশেনর উত্তর</h1>
+  
+<div class="faq-container" style="background-color: #ffcccc;">
+    <div class="faq-question" style="background-color: #1c4947;" onclick="toggleAnswer(this)">
+        <h3>এক ফাইলে কতদিন যাবে?</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="faq-answer" style="background-color: #; font-weight: bold;">
+        <p>১টি ফাইলে  ৪০-৪৫ দিন যাবে</p>
+    </div>
+</div>
+  
+  <div class="faq-container" style="background-color: #dfacae;">
+    <div class="faq-question" style="background-color: #38938f ;" onclick="toggleAnswer(this)">
+        <h3>অর্ডার করার কতদিন পর পাবো ?</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="faq-answer" style="background-color: #; font-weight: bold;">
+        <p>ঢাকার ভিতরে ২-৩ কার্যদিবস এবং ঢাকার বাহিরে ৩-৫ কার্যদিবসের মধ্যে পেয়েযাবেন ইনশাআল্লাহ।</p>
+    </div>
+</div>
+  
+  <div class="faq-container" style="background-color: Thistle;">
+    <div class="faq-question" style="background-color: SteelBlue;" onclick="toggleAnswer(this)">
+        <h3>এলিট কর্পোরেশনের অরজিনাল পণ্য কিভাবে চিনবেন ?</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="faq-answer" style="background-color: #; font-weight: bold;">
+        <p>১. পণ্য রিসিভ করার আগে অবশ্যই এলিট কর্পোরেশনের একমাত্র ওয়েবসাইট www.elitecorpo.com পণ্যের গায়ে লেখা আছে কিনা দেখে নিবেন।</p>
+২. আপনি যে পণ্য রিসিভ করছেন সে পণ্যের গায়ে এলিট কর্পোরেশনের পক্ষ থেকে সিকিউরিটি কোড দেয়া হবে,এবং স্ক্যানার ও দেওয়া থাকবে।প্রথমে স্ক্যানার টি স্ক্যান করে Www.elitcorpo.com ওয়েবসাইটে যাবেন।এরপর ৮ ডিজিটের কোডটি দিবেন।সাবমিট অফসনে ক্লিক করলে আপনার পণ্যটি অরজিনাল কিনা আপনাকে দেখাবে।মনে রাখবেন কোডটি শুধুমাত্র ১ বার ব্যবহার করা
+      যাবে।২ বার দিবেন না।</p>
+৩. অবশ্যই পণ্যের গায়ে এলিট কর্পোরেশনের ট্রেডমার্ক করার লোগো চেক করে রিসিভ করবেন।</p>
+৪. পণ্যের গায়ে উৎপাদনকারী লাইসেন্স নং আছে কিনা চেক করে নিবেন। লাইসেন্স নং 242/2023।</p>
+৫. কাস্টমাররা পণ্য ক্রয়ের পর এলিট কর্পোরেশন এর ওয়েবসাইটে সাইন আপ করতে পারবেন। এবং সাথে সাথে অভিনন্দন মেসেজ পাবেন।
+
+#কেনাকাটা_হোক_বিশ্বস্ততার_সঙ্গে!</p>
+    </div>
+</div>
+  
+  
+
+
+  
+  
+
+   <div class="pricing-header">
+    <h2></h2>
+</div>
+
+
+ 
+
+ 
+     
+
+<div id="loadingAnimation">
+    <div class="loader"></div>
+    <p id="loadingText" style="font-weight: bold; color: green;">Order confirming...</p>
+
+</div>
+
+<div class="button-container">
+  <button class="custom-button">
+    অর্ডার করুন <span class="icon">👇</span>
+  </button>
+</div>
+
+
+
+<div class="order-form">
+    <form id="orderForm" action="https://script.google.com/macros/s/AKfycbwt-I7AygFiEvWJMXa9eRraZpffCCWOSPuwzr53XNfQTmrHWIKuTy2IONtVZ_pY5T34MQ/exec" method="post">
+        <div class="product-selection">
+          
+           <h4 style="text-align: center; font-size: 23px; padding: 0 10px;"> আইটেম সিলেক্ট করুন  </h4>
+            <!-- Product options -->
+          <label class="product-option">
+                <input type="radio" name="product" value="এক_মাসের_কোর্স ১০০ গ্রাম,  ৯৯০ টাকা">
+                <span class="product-info">
+                        <span class="product-name">এক মাসের কোর্স</span><br>
+                        <span class="product-description">এক মাসের কোর্স ১০০ গ্রাম</span><br>
+                        <span class="product-price">৯৯০ টাকা</span>
+                    </span>
+            </label>
+
+        </div>
+      
+       <h4 style="text-align: center; font-size: 18px; padding: 0 10px;"> সঠিক তথ্য দিয়ে ফর্মটি পুরন করুন। (অগ্রিম ১ টাকাও পেমেন্ট করতে হবে না। প্রোডাক্ট হাতে পেয়ে টাকা পরিশোধ করুন।)</h4>
+      
+        <h4 style="text-align: center; font-size: 17px; padding: 0 10px;"> ডেলিভারি চার্জ সম্পুর্ন ফ্রী  </h4>
+      
+        <!-- User details -->
+        <input type="text" name="fullName" placeholder="Full Name" required><br>
+        <input type="tel" name="phoneNumber" placeholder="Phone Number" required><br>
+        <input type="email" name="email" placeholder="Email (Optional) না দিলেও চলবে"><br>
+        <input type="text" name="district" placeholder="জেলা" required><br>
+        <input type="text" name="thana" placeholder="থানা" required><br>
+        <input type="text" name="address" placeholder="বাসার ঠিকানা/যেখান থেকে রিসিভ করবেন" required><br>
+        <!-- Hidden input field to capture selected product -->
+        <input type="hidden" id="selectedProduct" name="selectedProduct"> 
+      
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="payment-method">
+    <div class="payment-option">
+        <i class="fas fa-money-bill"></i>
+        <span>Cash on Delivery</span>
+    </div>
+    <div class="shipping-option">
+        <i class="fas fa-truck"></i>
+        <span>Free Shipping</span>
+    </div>
+</div>
+
+<div style="margin-top: 20px; text-align: center;">
+    <!-- Submit button -->
+    <button type="submit">PLACE ORDER</button>
+</div>
+
+      
+    </form>
+</div>
+
+
+  
+  
+  
+
+
+
+
+  <script src="script.js" defer></script>
+</body>
+
+<div class="popup" id="privacy-policy-popup">
+  <div class="popup-content">
+    
+
+<div id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>Email: rupok6799@gmail.com</p>
+            <p>Phone: +8801843868091</p>
+            <p></p>
+        </div>
+    </div>
+<dive>
+  
+  
+  
+</dive>
+<footer>
+    &copy; 2024 The city mart LtD
+</footer>
+
+<a href="https://wa.me/1843868091" id="message-us" target="_blank">
+        <img src="https://raw.githubusercontent.com/healthymartshop/go/main/20240309_124142.png" alt="Messenger Logo">
+        </a>
+
+<script>
+  // Function to display a modal with a message for a certain duration
+function showAlertModal(message) {
+    var modal = document.createElement('div');
+    modal.classList.add('alert-modal');
+    modal.innerHTML = '<p>' + message + '</p>';
+    document.body.appendChild(modal);
+
+    // Close the modal after some time (e.g., 3 seconds)
+    setTimeout(function () {
+        modal.remove();
+    }, 3000);
+}
+
+// Function to highlight the product selection area if no product is selected
+function highlightSelectArea() {
+    var productSelection = document.querySelector('.product-selection');
+    // Scroll to the product selection section
+    productSelection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    setTimeout(function () {
+        var count = 0;
+        var interval = setInterval(function () {
+            productSelection.style.border = count % 2 === 0 ? '2px solid red' : 'none';
+            count++;
+            if (count === 6) {
+                clearInterval(interval);
+            }
+        }, 500);
+    }, 500); // Delay the red border effect by 500 milliseconds to allow time for scrolling
+}
+
+</script>
+
+<script>
+    // Function to capture product selection and submit the form
+    function captureProductAndSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        var selectedProduct = document.querySelector('input[name="product"]:checked');
+        if (!selectedProduct) {
+            showAlertModal("Please select a product."); // Display message if no product is selected
+            highlightSelectArea();
+            return; // Stop further execution if no product is selected
+        }
+
+        // Show loading animation
+        document.getElementById('loadingAnimation').style.display = 'block';
+
+        // Submit the form
+        document.getElementById("selectedProduct").value = selectedProduct.value;
+        document.getElementById("orderForm").submit();
+
+        // Hide the loading animation after 3 seconds (or any suitable time)
+        setTimeout(function() {
+            document.getElementById('loadingAnimation').style.display = 'none';
+            
+            // Redirect to the custom page after successful form submission
+            window.location.href = "orderconfirmed.html";
+        }, 3000);
+    }
+
+    // Event listener for form submission
+    document.getElementById("orderForm").addEventListener("submit", captureProductAndSubmit);
+</script>
+
+
+<script>
+
+// Get the Buy Now button
+var buyNowButton = document.querySelector('.buy-now');
+
+// Get the product section
+var productSection = document.getElementById('productSection');
+
+// Add a click event listener to the button
+buyNowButton.addEventListener('click', function() {
+  // Scroll to the product section
+  productSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buyNowButton = document.querySelector('.buy-now');
+    const productSelection = document.querySelector('.product-selection');
+    
+    buyNowButton.addEventListener('click', function() {
+        productSelection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+
+</script>
+
+
+
+<script>
+
+
+function changeImage(thumbnail) {
+  var mainImage = document.getElementById('mainImage');
+  var tempSrc = mainImage.src;
+  mainImage.style.opacity = '0'; // Fade out the main image
+  thumbnail.style.opacity = '0'; // Fade out the thumbnail
+  setTimeout(function() {
+    mainImage.src = thumbnail.src;
+    thumbnail.src = tempSrc;
+    mainImage.style.opacity = '1'; // Fade in the new main image
+    thumbnail.style.opacity = '1'; // Fade in the new thumbnail
+  }, 300); // Wait for the fade out effect (0.3s)
+}
+
+    window.onload = function() {
+        var productOptions = document.querySelectorAll('.product-option input[type="radio"]');
+        if (productOptions.length === 1) {
+            productOptions[0].checked = true;
+        }
+    };
+
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(function(question) {
+            question.addEventListener('click', function() {
+                const answer = question.nextElementSibling;
+                if (answer.classList.contains('show')) {
+                    // Close the answer slowly
+                    answer.style.transition = 'max-height 0.5s ease, opacity 0.5s ease'; // Adjusted closing animation speed to 0.5 seconds
+                    answer.style.maxHeight = '0';
+                    answer.style.opacity = '0';
+                    answer.classList.remove('show');
+                } else {
+                    // Hide all other answers before showing the current one
+                    faqQuestions.forEach(function(q) {
+                        const ans = q.nextElementSibling;
+                        if (ans !== answer && ans.classList.contains('show')) {
+                            ans.style.transition = 'max-height 0.5s ease, opacity 0.5s ease'; // Adjusted closing animation speed to 0.5 seconds
+                            ans.style.maxHeight = '0';
+                            ans.style.opacity = '0';
+                            ans.classList.remove('show');
+                        }
+                    });
+                    // Open the answer slowly
+                    answer.style.transition = 'max-height 2s ease, opacity 2s ease'; // Adjusted opening animation speed to 2 seconds
+                    answer.style.maxHeight = '500px'; // Adjust the max height according to your content
+                    answer.style.opacity = '1';
+                    answer.classList.add('show');
+                }
+            });
+        });
+    });
+
+let slideIndex = 0;
+let intervalId;
+
+showSlide(slideIndex);
+
+function prevSlide() {
+  showSlide(slideIndex -= 1);
+  restartInterval();
+}
+
+function nextSlide() {
+  showSlide(slideIndex += 1);
+  restartInterval();
+}
+
+function showSlide(n) {
+  const slides = document.querySelectorAll('.slider img');
+  if (n >= slides.length) {slideIndex = 0}
+  if (n < 0) {slideIndex = slides.length - 1}
+  slides.forEach(slide => slide.style.display = "none");
+  slides[slideIndex].style.display = "block";
+}
+
+function restartInterval() {
+  clearInterval(intervalId);
+  intervalId = setInterval(() => {
+    nextSlide();
+  }, 2000);
+}
+
+// Event listeners for touchstart and touchend
+const slider = document.querySelector('.slider');
+slider.addEventListener('touchstart', () => {
+  clearInterval(intervalId);
+});
+
+slider.addEventListener('touchend', () => {
+  restartInterval();
+});
+
+// Initial start of interval
+restartInterval();
+
+
+</script>
+
+
+</body>
+</html>

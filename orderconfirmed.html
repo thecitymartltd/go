@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 auto; /* Center the body horizontally */
+            padding-bottom: 100px;
+            padding-top:100px;
+            max-width: 1200px; /* Set a fixed maximum width for the body */
+        }
+
+        header {
+            background-color: black;
+            color: orange;
+            padding: 10px 0;
+            text-align: center;
+            justify-content: text;
+            position: fixed;
+            width: 100%;
+            height : 80px;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .text-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* Button container styling */
+        .button-container {
+            text-align: center;
+        }
+
+        /* Button styling */
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #FFA500; /* Change to desired hover color */
+            color: white; /* Change to desired text color on hover */
+        }
+
+        /* Button specific styling */
+        .go-to-home {
+            background-color: #008CBA; /* Change to desired color */
+            color: white; /* Change to desired text color */
+        }
+
+        .back {
+            background-color: #4CAF50; /* Change to desired color */
+            color: white; /* Change to desired text color */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>ORDER CONFIRMED</h1>
+</header>
+<div class="text-container">
+    <p class="bold-text">আপনার অর্ডার টি কনফার্ম করা হয়েছে। ৩/৪ দিনের মধ্যেই আপনার দেয়া এড্রেসে আমাদের ডেলিভারি মেন আপনার প্রোডাক্ট টি পৌছে দিবে।
+        যেকনো সহায়তার জন্য বা সরাসরি কথা বলতে নিচের দেয়া নাম্বারে যোগাযোগ করুন।</p>
+</div>
+<div class="button-container">
+    <button class="go-to-home" onclick="window.location.href='index.html'">Go To Home</button>
+    <button class="back" onclick="window.history.back()">Back</button>
+</div>
+<h2>Contact Us</h2>
+<div class="contact-info">
+    <p>Email: rupok6799@gmail.com</p>
+    <p>Phone: +8801843868091</p>
+    <p></p>
+</div>
+</body>
+</html>
